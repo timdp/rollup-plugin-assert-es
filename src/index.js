@@ -20,6 +20,8 @@ export default (options = {}) => {
   const filter = createFilter(options.include, options.exclude)
   const version = options.ecmaVersion || 5
   return {
+    name: 'assert-es',
+
     transform (code, id) {
       if (!filter(id) || extname(id) !== '.js') {
         return null
