@@ -4,7 +4,7 @@ import {Instrumenter} from 'isparta'
 import del from 'del'
 import seq from 'run-sequence'
 
-const COVERAGE_THRESHOLDS = {global: 90}
+const COVERAGE_THRESHOLDS = {global: 80}
 
 const $ = loadPlugins()
 
