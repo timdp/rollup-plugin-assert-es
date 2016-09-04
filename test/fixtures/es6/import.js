@@ -1,3 +1,3 @@
-import {rollup} from 'rollup'
+import { rollup } from 'rollup'
 
 rollup()

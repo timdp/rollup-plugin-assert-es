@@ -1,6 +1,6 @@
 import assertES from '../../src/'
-import {getFixturePath, ES3, ES5, ES6, EXCEPT} from '../lib/fixtures'
-import {rollup} from 'rollup'
+import { getFixturePath, ES3, ES5, ES6, EXCEPT } from '../lib/fixtures'
+import { rollup } from 'rollup'
 
 const allow = (name, version) => expect(rollup({
   entry: getFixturePath(`es${version}/${name}`),

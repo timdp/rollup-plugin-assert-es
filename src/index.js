@@ -1,13 +1,13 @@
-import {parse} from 'acorn'
-import {replace, VisitorOption} from 'estraverse'
-import {generate} from 'escodegen'
-import {createFilter} from 'rollup-pluginutils'
-import {extname} from 'path'
+import { parse } from 'acorn'
+import { replace, VisitorOption } from 'estraverse'
+import { generate } from 'escodegen'
+import { createFilter } from 'rollup-pluginutils'
+import { extname } from 'path'
 
 const reType = /^(?:Im|Ex)port[A-Z]/
 
 const importExportRemovingVisitor = {
-  enter ({type}) {
+  enter ({ type }) {
     if (reType.test(type)) {
       return VisitorOption.Remove
     }
@@ -26,10 +26,10 @@ export default (options = {}) => {
       if (!filter(id) || extname(id) !== '.js') {
         return null
       }
-      const ast = parse(code, {ecmaVersion: 6, sourceType: 'module'})
+      const ast = parse(code, { ecmaVersion: 6, sourceType: 'module' })
       const prunedCode = generate(prune(ast))
       try {
-        parse(prunedCode, {ecmaVersion: version, sourceType: 'module'})
+        parse(prunedCode, { ecmaVersion: version, sourceType: 'module' })
       } catch (err) {
         throw new Error(`Failed to parse ${id} as ES${version}: ${err}`)
       }
