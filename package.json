@@ -23,7 +23,7 @@
   "repository": "timdp/rollup-plugin-assert-es",
   "bugs": "https://github.com/timdp/rollup-plugin-assert-es/issues",
   "dependencies": {
-    "acorn": "^3.2.0",
+    "acorn": "^4.0.0",
     "escodegen": "^1.8.0",
     "estraverse": "^4.2.0",
     "rollup-pluginutils": "^1.5.2"
