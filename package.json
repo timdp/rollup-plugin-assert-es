@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-assert-es",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Verifies that bundled code is ES5.",
   "main": "index.js",
   "jsnext:main": "src/index.js",
