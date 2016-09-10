@@ -48,7 +48,7 @@
     "gulp-standard": "^7.0.1",
     "in-publish": "^2.0.0",
     "isparta": "^4.0.0",
-    "rollup": "^0.34.13",
+    "rollup": "^0.35.4",
     "run-sequence": "^1.2.1",
     "sinon": "^1.17.4",
     "sinon-chai": "^2.8.0"
