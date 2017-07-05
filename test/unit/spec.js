@@ -5,12 +5,12 @@ import { rollup } from 'rollup'
 const allow = (name, version) => expect(rollup({
   entry: getFixturePath(`es${version}/${name}`),
   plugins: [assertES()]
-})).to.be.resolved
+}).then((bundle) => bundle.generate())).to.be.resolved
 
 const disallow = (name, version) => expect(rollup({
   entry: getFixturePath(`es${version}/${name}`),
   plugins: [assertES()]
-})).to.be.rejected
+}).then((bundle) => bundle.generate())).to.be.rejected
 
 const allowAll = (arr, version) => {
   for (const name of arr) {
@@ -25,17 +25,6 @@ const disallowAll = (arr, version) => {
 }
 
 describe('rollup-plugin-assert-es', function () {
-  describe('plugin', function () {
-    it('ignores module names not ending in .js', function () {
-      return expect(
-        rollup({
-          entry: getFixturePath('ignored', '.txt'),
-          plugins: [assertES()]
-        }).then((bundle) => bundle.generate())
-      ).to.be.resolved
-    })
-  })
-
   describe('ES6-to-ES5', function () {
     allowAll(ES3, 3)
 

@@ -31,10 +31,6 @@ export default {
 
 Target ECMAScript version. Defaults to 5.
 
-### `include` and `exclude`
-
-From [rollup-pluginutils](https://github.com/rollup/rollup-pluginutils#createfilter).
-
 ## Author
 
 [Tim De Pauw](https://tmdpw.eu/)

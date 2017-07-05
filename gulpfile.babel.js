@@ -5,7 +5,7 @@ import del from 'del'
 import seq from 'run-sequence'
 import yargs from 'yargs'
 
-const COVERAGE_THRESHOLDS = {global: 80}
+const COVERAGE_THRESHOLDS = {global: 60}
 
 const $ = loadPlugins()
 const argv = yargs
