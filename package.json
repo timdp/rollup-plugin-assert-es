@@ -23,7 +23,7 @@
   "repository": "timdp/rollup-plugin-assert-es",
   "bugs": "https://github.com/timdp/rollup-plugin-assert-es/issues",
   "dependencies": {
-    "acorn": "^5.1.0"
+    "acorn": "^5.5.0"
   },
   "devDependencies": {
     "babel-preset-es2015": "^6.16.0",
