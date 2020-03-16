@@ -40,7 +40,7 @@
     "gulp-mocha": "^3.0.1",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-standard": "^10.0.0",
-    "in-publish": "^2.0.0",
+    "in-publish": "2.0.0",
     "isparta": "^4.0.0",
     "rollup": "^0.43.0",
     "run-sequence": "^2.0.0",
